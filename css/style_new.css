@@ -1,0 +1,18 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1; /* space between lines*/
+  font-weight: 400;
+  color: #555;
+}
