@@ -2,6 +2,41 @@
 
 --- 01 TYPOGRAPHY SYSTEM
 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default:400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Small: 1.05
+Paragraph default: 1.6
+
+--- 02 COLORS
+
+- Primary:#5bb4ac
+- Secondary:#91bbbd
+- Tints:
+- Shades:
+- Accents:
+- Greys: #555
+
+--- 05 SHADOWS
+
+--- 06 BORDER_RADIUS
+
+Default: 9px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
 */
 
 * {
@@ -13,6 +48,95 @@
 body {
   font-family: sans-serif;
   line-height: 1; /* space between lines*/
-  font-weight: 400;
-  color: #555;
+  font-weight: 600;
+  color: #333;
+}
+
+/* .test { */
+/* background-color: red; */
+/* padding: 100px; */
+/* width: 1000px; */
+/* max-width: 1000px;  */
+/*IMPORTANT - If the container width is larger than the specified max-width then the width of the element is equal the value that was specified for max-width! If the container is less than the specified max-width then the width of the element will be 100% of the container element width!*/
+/* max-width: 50rem;  */
+/* 1 rem = 16px -> 50rem = 800px*/
+/* padding: 4rem; */
+/* color: aliceblue; */
+/* font-size: 2rem; */
+/* } */
+
+/*********************************************/
+/*GENERAL COMPONENT*/
+/*********************************************/
+
+/*********************************************/
+/*HEADER*/
+/*********************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f3f5;
+  /*height of header to have 'sticky elements' when resizing page*/
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 4.8rem;
+}
+
+/*********************************************/
+/*NAVIGATION*/
+/*********************************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.8rem;
+  /*animate in seconds*/
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #087f5b;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #5bb4ac;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #087f5b;
+}
+
+/*********************************************/
+/*HERO SECTION*/
+/*********************************************/
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #087f5b;
+}
+
+.hero-img {
+  width: 100%;
 }
