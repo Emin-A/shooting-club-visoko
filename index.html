@@ -19,17 +19,21 @@
   <body>
     <!-- <div class="test">TEST</div> -->
     <header class="header">
-      <img
-        src="/Logos/SK Visoko Logo 2.png"
-        alt="SK-Visoko logo"
-        class="logo"
-      />
+      <a href="index.html">
+        <img
+          src="/Logos/SK Visoko Logo 2.png"
+          alt="SK-Visoko logo"
+          class="logo"
+        />
+      </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <!-- <li>
             <a class="main-nav-link" href="index.html">Shooting Club Visoko</a>
           </li> -->
-          <li><a class="main-nav-link" href="about.html">About Us</a></li>
+          <li>
+            <a class="main-nav-link" href="about.html">About Us</a>
+          </li>
           <li><a class="main-nav-link" href="gallery.html">Gallery</a></li>
           <li><a class="main-nav-link" href="contact.html">Contact Us</a></li>
           <li><a class="main-nav-link" href="shooter.html">Sign In</a></li>
@@ -135,15 +139,41 @@
       <button>Confirm</button>
 
       <h2>- STEP 03# - Checkout: Reservation Details -</h2>
-
-      <!-- Footer - will have social medial icons to direct to from any nav section of the web site -->
-      <footer>
-        <p>
-          Copyright &copy by <a href="#">Emin A.</a
-          ><a href="index.html">Streljački Klub Visoko</a
-          ><a href="#">FaceBook</a><a href="#">Instagram</a>
-        </p>
-      </footer>
     </main>
+    <!-- Footer - will have social medial icons to direct to from any nav section of the web site -->
+    <footer class="footer">
+      <div class="container grid grid--4-cols">
+        <div class="logo-col">
+          <a href="index.html" class="footer-logo">
+            <img
+              src="/Logos/SK Visoko Logo 2.png"
+              alt="SK-Visoko logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="author-col">
+          <p>Copyright &copy 2022 by SK-Visoko, Inc. All rights reserved.</p>
+        </div>
+        <div class="address-col">
+          <address class="contacts">
+            <p>Bakračeva broj 1, 71300 Visoko, Bosnia and Herzegovina</p>
+            <p>
+              <a href="tel:+387-61-611-543">+387-61-611-543</a><br /><a
+                href="mailto:skvisoko1@gmail.com"
+                >skvisoko1@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <div class="social-col">
+          <p>
+            <a href="https://m.facebook.com/skvisoko" class="social-icon"
+              ><img src="Icons/facebook-f.png" alt="facebook" class="icon"
+            /></a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
