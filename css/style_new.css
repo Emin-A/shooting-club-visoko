@@ -18,9 +18,11 @@ Paragraph default: 1.6
 
 --- 02 COLORS
 
-- Primary:#5bb4ac
-- Secondary:#91bbbd
-- Tints:
+- Primary: #087f5b
+- Secondary: 
+- Tints: #84bfad
+- Tints 01: #def0ee #cee9e6 #7cc3bd #49908a #1b3634 
+- Tints 02: #cee5de #84bfad #39997c #066649 #033324
 - Shades:
 - Accents:
 - Greys: #555
@@ -45,8 +47,12 @@ Default: 9px
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1; /* space between lines*/
   font-weight: 600;
   color: #333;
@@ -104,12 +110,13 @@ body {
   font-weight: 600;
   font-size: 1.8rem;
   /*animate in seconds*/
-  transition: all 0.3s;
+  transition: background-color 0.3s;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #087f5b;
+  color: #84bfad;
+  transition: all 0.3s;
 }
 
 .main-nav-link.nav-cta:link,
@@ -117,26 +124,92 @@ body {
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: #fff;
-  background-color: #5bb4ac;
+  background-color: #84bfad;
 }
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #087f5b;
+  transition: background-color 0.3s;
 }
 
 /*********************************************/
 /*HERO SECTION*/
 /*********************************************/
 
+.section-hero {
+  background-color: #84bfad;
+  padding: 9.6rem 0;
+}
+
 .hero {
   max-width: 130rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #222;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
   background-color: #087f5b;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  /*Put the transition on original "state"*/
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #087f5b;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #033324;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #84bfad;
+  color: #555;
+  /* border: 3px solid #fff; */
+  /*Trick to add border inside*/
+  box-shadow: inset 0 0 0 3px #fff;
 }
 
 .hero-img {
   width: 100%;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
