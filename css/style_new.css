@@ -213,11 +213,74 @@ body {
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
+/*********************************************/
+/*HOW IT WORKS SECTION (REUSABLE GRID*/
+/*********************************************/
+/*********************************************/
+/*MAKING THE MAIN/SECTION HOW PART*/
+/*********************************************/
+
+.section-how {
+  padding: 9.6px 0;
+  background-color: orangered;
+  /*01. Now it is all stacked on top of each other*/
+}
+
+/*08. Now we can create a reusable centered container*/
+/*This will center the content in our page*/
+/*now we write "section-how container grid grid--2-cols"*/
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/*02. We will make now a reusable grid lets say 2x2*/
+/*We write 'grid' int the html next to 'section-how' class*/
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+/*03. now to reuse the grid we need to export it*/
+/*we move the upper code 'grid-template-colums...' to here now*/
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+/*04. now we can copy above and make '.grid--3-cols' 3 columns*/
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+/*05. we then write in html the first 'section-how grid' this'grid--2-cols'   "section-how grid grid--2-cols"*/
+/*then for the other 'section-how grid' we write "section-how grid grid--3-cols"*/
+/*06. now this grid reusability will work in the footer !!! */
+
+.section-how div div {
+  padding: 100px;
+  font-size: 50px;
+  background-color: #333;
+}
+
+/*09. We turned this off because we want the .section how to be in a div so that it will span its width from left to right border*/
+/*we delete  "grid grid--2-cols" from the first section class and leave it as "section-how"*/
+/*we add div class="container grid grid --2-cols" for the first section*/
+/* .section-how div:nth-child(1) {
+  background-color: aqua;
+}
+.section-how div:nth-child(2) {
+  background-color: blue;
+}
+.section-how div:nth-child(3) {
+  background-color: violet;
+}
+.section-how div:nth-child(4) {
+  background-color: red;
+} */
 
 /*********************************************/
 /*FOOTER SECTION*/
 /*********************************************/
 
+/*07. Reusing the grid template from hero to here!*/
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
@@ -237,9 +300,42 @@ body {
 }
 
 .footer {
-  padding: 9.6rem 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-left: 4.8rem; */
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  /* flex-direction: row;
+  gap: 2.4rem; */
 }
 
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+/* .footer div div { */
+/* padding: 100px; */
+/* font-weight: 600; */
+/* font-size: 1.8rem; */
+/* } */
+
 .icon {
-  height: 1.4rem;
+  height: 3.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #84bfad;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #087f5b;
+  transition: all 0.3s;
 }
