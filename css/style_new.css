@@ -276,6 +276,12 @@ body {
   background-color: red;
 } */
 
+.section-how {
+  /*top / right / bottom / left*/
+  /*or top / horizontal / left*/
+  padding: 4.8rem 0 12.8rem 0;
+}
+
 /*********************************************/
 /*FOOTER SECTION*/
 /*********************************************/
@@ -310,6 +316,16 @@ body {
   /* flex-direction: row;
   gap: 2.4rem; */
 }
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+/*adjusting the footer column widths of the grid*/
+/*we need to rename the div class of footer to "container grid grid--footer"*/
+.grid--footer {
+  grid-template-columns: 1fr 2.8fr 2.5fr 1fr;
+}
 
 .footer-heading {
   font-size: 1.8rem;
@@ -325,6 +341,16 @@ body {
 
 .icon {
   height: 3.2rem;
+  /*to position the element at the end of the row :*/
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  /* line-height: 1.6; */
 }
 
 .footer-link:link,
