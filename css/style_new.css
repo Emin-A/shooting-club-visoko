@@ -149,6 +149,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
   align-items: center;
+  padding: 0 3.2rem;
 }
 
 .heading-primary {
@@ -222,7 +223,7 @@ body {
 
 .section-how {
   padding: 9.6px 0;
-  background-color: orangered;
+  background-color: #f1f3f5;
   /*01. Now it is all stacked on top of each other*/
 }
 
@@ -230,7 +231,7 @@ body {
 /*This will center the content in our page*/
 /*now we write "section-how container grid grid--2-cols"*/
 .container {
-  max-width: 120rem;
+  /* max-width: 130rem; */
   padding: 0 3.2rem;
   margin: 0 auto;
 }
@@ -239,25 +240,26 @@ body {
 /*We write 'grid' int the html next to 'section-how' class*/
 .grid {
   display: grid;
-  gap: 9.6rem;
+  /* gap: 3.2rem; */
 }
 /*03. now to reuse the grid we need to export it*/
 /*we move the upper code 'grid-template-colums...' to here now*/
-.grid--2-cols {
+/* .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
-}
+} */
 /*04. now we can copy above and make '.grid--3-cols' 3 columns*/
-.grid--3-cols {
+/* .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
-}
+} */
 /*05. we then write in html the first 'section-how grid' this'grid--2-cols'   "section-how grid grid--2-cols"*/
 /*then for the other 'section-how grid' we write "section-how grid grid--3-cols"*/
 /*06. now this grid reusability will work in the footer !!! */
 
 .section-how div div {
-  padding: 100px;
-  font-size: 50px;
-  background-color: #333;
+  padding: 20px;
+  font-size: 30px;
+  margin: 0 auto;
+  /* background-color: #333; */
 }
 
 /*09. We turned this off because we want the .section how to be in a div so that it will span its width from left to right border*/
@@ -280,6 +282,64 @@ body {
   /*top / right / bottom / left*/
   /*or top / horizontal / left*/
   padding: 4.8rem 0 12.8rem 0;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  color: #555;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.pricing-name {
+  color: #087f5b;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  /* font-size: 1.9rem; */
+  letter-spacing: 0.75;
+}
+
+.pricing-plan {
+  list-style: none;
+  /* display: flex; */
+  align-items: center;
+}
+
+.pricing-plan:link,
+.pricing-plan:visited {
+  /* display: inline-block; */
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.8rem;
+  /*animate in seconds*/
+  transition: background-color 0.3s;
+}
+
+.pricing-plan:hover,
+.pricing-plan:active {
+  cursor: pointer;
+  /* display: inline-block; */
+  /* padding: 1.2rem 2.4rem; */
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 5px #333;
+  background-color: #84bfad;
+  /* color: #eee; */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.total-price {
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
 }
 
 /*********************************************/
@@ -313,8 +373,8 @@ body {
   /* padding-left: 4.8rem; */
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  /* flex-direction: row;
-  gap: 2.4rem; */
+  flex-direction: row;
+  /* gap: 2.4rem; */
 }
 .footer {
   padding: 12.8rem 0;
@@ -324,7 +384,8 @@ body {
 /*adjusting the footer column widths of the grid*/
 /*we need to rename the div class of footer to "container grid grid--footer"*/
 .grid--footer {
-  grid-template-columns: 1fr 2.8fr 2.5fr 1fr;
+  grid-template-columns: 1.5fr 3fr 3fr 1.5fr;
+  gap: 9.6rem;
 }
 
 .footer-heading {
@@ -333,11 +394,11 @@ body {
   margin-bottom: 3.2rem;
 }
 
-/* .footer div div { */
-/* padding: 100px; */
-/* font-weight: 600; */
-/* font-size: 1.8rem; */
-/* } */
+/* .footer div div {
+  padding: 100px;
+  font-weight: 600;
+  font-size: 1.8rem;
+} */
 
 .icon {
   height: 3.2rem;
