@@ -311,6 +311,20 @@ body {
   gap: 1.6rem;
 }
 
+label {
+  display: block;
+  font: 1.6rem "Inter", sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
+/* .price {
+  font-size: 1.8rem;
+} */
+
 .pricing-name {
   color: #087f5b;
   font-weight: 600;
