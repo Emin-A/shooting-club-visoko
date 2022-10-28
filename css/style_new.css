@@ -228,6 +228,7 @@ body {
 .section-how {
   padding: 9.6px 0;
   background-color: #f1f3f5;
+
   /*01. Now it is all stacked on top of each other*/
 }
 
@@ -244,17 +245,20 @@ body {
 /*We write 'grid' int the html next to 'section-how' class*/
 .grid {
   display: grid;
-  /* gap: 3.2rem; */
+  gap: 3.2rem;
+  /* box-sizing: border-box; */
 }
+
 /*03. now to reuse the grid we need to export it*/
 /*we move the upper code 'grid-template-colums...' to here now*/
 /* .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 } */
 /*04. now we can copy above and make '.grid--3-cols' 3 columns*/
-/* .grid--3-cols {
+.grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
-} */
+}
+
 /*05. we then write in html the first 'section-how grid' this'grid--2-cols'   "section-how grid grid--2-cols"*/
 /*then for the other 'section-how grid' we write "section-how grid grid--3-cols"*/
 /*06. now this grid reusability will work in the footer !!! */
@@ -263,6 +267,7 @@ body {
   padding: 20px;
   font-size: 30px;
   margin: 0 auto;
+  /* gap: 3.2rem; */
   /* background-color: #333; */
 }
 
@@ -300,6 +305,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
+  grid-template-columns: 1fr;
   gap: 1.6rem;
 }
 
@@ -311,6 +317,14 @@ body {
   gap: 1.6rem;
 }
 
+.price:only-child {
+  font-size: 1.8rem;
+  grid-template-columns: 1fr;
+  /* flex-direction: column; */
+  padding: 0;
+  margin-right: 0;
+}
+
 label {
   display: block;
   font: 1.6rem "Inter", sans-serif;
@@ -320,10 +334,6 @@ input,
 label {
   margin: 0.4rem 0;
 }
-
-/* .price {
-  font-size: 1.8rem;
-} */
 
 .pricing-name {
   color: #087f5b;
