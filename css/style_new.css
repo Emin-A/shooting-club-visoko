@@ -404,6 +404,97 @@ label {
   padding: 4.8rem 0 12.8rem 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.container-calendar-center {
+  max-width: 130rem;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 3.2rem;
+}
+.container-calendar-center div {
+  padding: 20px;
+  margin: 0 auto;
+  gap: 3.2rem;
+}
+
+/*Month header*/
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #84bfad;
+  text-align: center;
+}
+
+/*Month list*/
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: #fff;
+  /* font-size: 20px; */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*Previous button inside month header*/
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/*Next button*/
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon - Sun) */
+
+.weekdays {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f1f3f5;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #777;
+  text-align: center;
+}
+
+/* Days (1-31) */
+
+.days {
+  padding: 10px;
+  background: #f1f3f5;
+  margin: 0px;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 20px;
+  /* padding: 10px; */
+  /* font-size: 12px; */
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px 10px;
+  /* background: #fff; */
+  border: solid 5px #84bfad;
+  color: #84bfad !important;
+}
+
 /*********************************************/
 /*STEP 03 - CHECKOUT: RESERVATION DETAILS*/
 /*********************************************/
