@@ -517,7 +517,7 @@ ul {
 }
 
 .section-checkout div div {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0 auto;
 }
 
@@ -549,8 +549,8 @@ ul {
 }
 
 .col-25,
-.col-50,
-.col-75 {
+.col-75,
+.col-50 {
   padding: 0 16px;
 }
 
@@ -560,7 +560,24 @@ ul {
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgray;
   border-radius: 3px;
+  align-items: center;
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  border-radius: 9px;
 }
+
+/* .container-form {
+  float: left;
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .container-cart {
+  display: flex;
+  flex-direction: row;
+} */
 
 input[type="text"] {
   width: 100%;
